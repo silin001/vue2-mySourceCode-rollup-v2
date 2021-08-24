@@ -1,0 +1,29 @@
+{
+  "name": "vue2-mysourcecode-rollup-v2",
+  "version": "1.0.0",
+  "description": "vue2 源码解析  开发环境基于rollup",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "rollup -c",
+    "serve": "cross-env ENV=development rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silin001/vue2-mySourceCode-rollup-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silin001/vue2-mySourceCode-rollup-v2/issues"
+  },
+  "homepage": "https://github.com/silin001/vue2-mySourceCode-rollup-v2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "cross-env": "^7.0.3",
+    "rollup": "^2.56.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-serve": "^1.1.0"
+  }
+}

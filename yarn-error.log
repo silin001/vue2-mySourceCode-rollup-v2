@@ -1,0 +1,55 @@
+Arguments: 
+  D:\nodeJS\node.exe C:\Users\86295\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add rollup @babel/core @babel/perset-env rollup-plugin-babel rollup-plugin-serve cross-env -D
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\vscode\Microsoft VS Code\bin;C:\Program Files\TortoiseSVN\bin;D:\xftp\;D:\JAVA\bin;D:\git\Git\cmd;D:\nvm\nvm;D:\nodeJS;D:\Xshell\;C:\Users\86295\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\86295\AppData\Local\Programs\Python\Python37-32\;C:\Users\86295\AppData\Local\Microsoft\WindowsApps;D:\webStorm2021\WebStorm 2021.1.2\bin;C:\Users\86295\AppData\Roaming\npm;D:\nodeJS\node_global
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@babel%2fperset-env: Not found
+      at Request.params.callback [as _callback] (C:\Users\86295\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (C:\Users\86295\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:400:28)
+      at Request.<anonymous> (C:\Users\86295\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:400:28)
+      at IncomingMessage.<anonymous> (C:\Users\86295\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:519:28)
+      at IncomingMessage.emit (events.js:412:35)
+      at endReadableNT (internal/streams/readable.js:1317:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "vue2-mySourceCode-rollup-v2",
+    "version": "1.0.0",
+    "description": "vue2 源码解析  开发环境基于rollup",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/silin001/vue2-mySourceCode-rollup-v2.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/silin001/vue2-mySourceCode-rollup-v2/issues"
+    },
+    "homepage": "https://github.com/silin001/vue2-mySourceCode-rollup-v2#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
