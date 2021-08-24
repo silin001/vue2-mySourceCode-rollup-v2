@@ -18,19 +18,22 @@
         return {
           name: 'Bergstrom',
           age: 19,
+          arr: [
+            { name: 'Joy' }
+          ],
           address: {
             name: '北京',
             number: 10001
           }
         }
       },
-
       // computed() { },
       // watch() { }
     })
     vm._data.name = '123'
-    console.log(vm._data.name)
-
+    vm._data.arr.push({ aa: 11 }) // 数据数据改变监控
+    // vm._data.arr.splice(0, 0, '9999')
+    console.log(vm._data.arr)
   </script>
 </body>
 
