@@ -20,25 +20,33 @@ function start (tagName, attrs) {
   console.log('标签是', tagName, '属性是', attrs)
 }
 function end (endText) {
-  console.log('结束标签s ', endText)
+  console.log('结束标签是 ', endText)
 }
 
 // AST语法树生成
 function parseHTML (html) {
   // 不停的去解析html字符串
   while (html) {
+    console.log('🚀🚀 ~ file: index.js ~ line 30 ~ parseHTML ~ html', html)
     let textEnd = html.indexOf('<')
+    console.log('🚀🚀 ~ file: index.js ~ line 31 ~ parseHTML ~ textEnd', textEnd)
     if (textEnd == 0) {
       // 如果为0  当前匹配到是一定是一个标签 开始或者结束
+      // 开始标签
       let startTagMatch = parseStartTag() // 获取匹配结果 tagname attrs
-      // console.log('🚀🚀 ~ file: index.js ~ line 22 ~ parseHTML ~ startTagMatch', startTagMatch)
+      console.log('🚀🚀 ~ file: index.js ~ line 22 ~ parseHTML ~ startTagMatch', startTagMatch)
+      console.log(html)
       if (startTagMatch) {
         start(startTagMatch.tagName, startTagMatch.attrs)
         continue // 如果开始标签匹配完毕 继续下一次匹配
       }
+      // let endTagMatch = html.match(endTag)
+      console.log(html)
+      // 结束标签
       let endTagMatch = html.match(endTag)
       if (endTagMatch) {
         advance(endTagMatch[0].length)
+        console.log(endTagMatch)
         end(endTagMatch[1])
         continue
       }
@@ -51,8 +59,8 @@ function parseHTML (html) {
       advance(text.length)
       chars(text)
     }
-
-    return html
+    // TODO 返回不完整
+    // return html
   }
   // 前进
   function advance (n) {

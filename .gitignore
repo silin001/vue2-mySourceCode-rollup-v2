@@ -1,5 +1,6 @@
 # Build and Release Folders
 .history
+dist
 bin-debug/
 bin-release/
 [Oo]bj/
