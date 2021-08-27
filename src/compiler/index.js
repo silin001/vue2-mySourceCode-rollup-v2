@@ -40,7 +40,6 @@ function parseHTML (html) {
         start(startTagMatch.tagName, startTagMatch.attrs)
         continue // 如果开始标签匹配完毕 继续下一次匹配
       }
-      // let endTagMatch = html.match(endTag)
       console.log(html)
       // 结束标签
       let endTagMatch = html.match(endTag)

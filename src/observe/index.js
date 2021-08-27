@@ -26,6 +26,7 @@ class Observer {
     // value.__ob__ = this // ⭐ 这里给每一个监控过的对象新增一个__ob__ 属性，在数组方法重写时需要用到
     // 使用Object.defineProperty 方法去添加
     def(value, '__ob__', this)
+    // 数组数据劫持
     if (Array.isArray(value)) {
       // 如果是数组的话并不会对索引进行观测，因为会导致性能问题
       // 前端开发中很少操作索引，  push unshift unshift
@@ -35,7 +36,8 @@ class Observer {
       value.__proto__ = arrayMethods // 原型添加我们重写的数组方法
       this.observerArray(value) // 1.数组中每一项进行观测
     } else {
-      this.walk(value) // 对象的进行观测
+      // 对象数据的劫持观测
+      this.walk(value)
 
     }
   }
@@ -44,6 +46,7 @@ class Observer {
       observe(data[index])
     }
   }
+  //循环获取data的key 并且监听
   walk (data) {
     let keys = Object.keys(data) //获取data key值 [name,age,address]
     keys.forEach((key) => {

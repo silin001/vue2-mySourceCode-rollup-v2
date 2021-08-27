@@ -25,7 +25,7 @@ methods.forEach((method) => {
     // console.log('🚀🚀 ~ file: array.js ~ line 23 ~ methods.forEach ~ ob', ob)
     switch (method) {
       case 'push':
-        inserted = args
+        // inserted = args
         break;
       case 'unshift':
         inserted = args
